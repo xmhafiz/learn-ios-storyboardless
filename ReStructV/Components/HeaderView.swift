@@ -37,7 +37,7 @@ class HeaderView: UIView {
         return label
     }()
     
-    private lazy var textStackView: UIStackView = { [unowned self] in
+    private lazy var textStackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [
                                         titleLabel,
                                         subtitleLabel])
@@ -46,7 +46,7 @@ class HeaderView: UIView {
         return stackView
     }()
     
-    private lazy var hStackView: UIStackView = { [unowned self] in
+    private lazy var hStackView: UIStackView = { 
         let stackView = UIStackView(arrangedSubviews: [
                                         headerImageView,
                                         textStackView])
