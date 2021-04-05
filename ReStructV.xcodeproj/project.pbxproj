@@ -17,6 +17,8 @@
 		86B4E7F5259AE4E200F2C0E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86B4E7F4259AE4E200F2C0E0 /* Assets.xcassets */; };
 		86B4E7F8259AE4E200F2C0E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86B4E7F6259AE4E200F2C0E0 /* LaunchScreen.storyboard */; };
 		86B4E811259C3D6000F2C0E0 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B4E810259C3D6000F2C0E0 /* HeaderView.swift */; };
+		86FA5DD4261AB438004A920C /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86FA5DD3261AB438004A920C /* UIViewExtension.swift */; };
+		86FA5DD7261ABCC7004A920C /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86FA5DD6261ABCC7004A920C /* ButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		86B4E7F7259AE4E200F2C0E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		86B4E7F9259AE4E200F2C0E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		86B4E810259C3D6000F2C0E0 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		86FA5DD3261AB438004A920C /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		86FA5DD6261ABCC7004A920C /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,7 @@
 				86B4E7ED259AE4DA00F2C0E0 /* SceneDelegate.swift */,
 				86B4E7EF259AE4DA00F2C0E0 /* ViewController.swift */,
 				8624DD2D261A8E4B004DEF5E /* UIViewControllerExtension.swift */,
+				86FA5DD3261AB438004A920C /* UIViewExtension.swift */,
 				8624DD30261A8EB4004DEF5E /* Store */,
 				86B4E80B259C3D1300F2C0E0 /* Components */,
 				86B4E7F4259AE4E200F2C0E0 /* Assets.xcassets */,
@@ -112,6 +117,7 @@
 			children = (
 				86B4E810259C3D6000F2C0E0 /* HeaderView.swift */,
 				8624DD2A261A8C08004DEF5E /* PostView.swift */,
+				86FA5DD6261ABCC7004A920C /* ButtonView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -235,7 +241,9 @@
 				8624DD27261A13D9004DEF5E /* DemoStore.swift in Sources */,
 				8624DD2B261A8C08004DEF5E /* PostView.swift in Sources */,
 				8624DD2E261A8E4B004DEF5E /* UIViewControllerExtension.swift in Sources */,
+				86FA5DD4261AB438004A920C /* UIViewExtension.swift in Sources */,
 				86B4E811259C3D6000F2C0E0 /* HeaderView.swift in Sources */,
+				86FA5DD7261ABCC7004A920C /* ButtonView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

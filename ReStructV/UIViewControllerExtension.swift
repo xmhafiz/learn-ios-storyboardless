@@ -26,7 +26,7 @@ extension UIViewController {
     }
     
     @available(iOS 13, *)
-    func toPreview() -> some View {
+    func showPreview() -> some View {
         // inject self (the current view controller) for the preview
         Preview(viewController: self)
     }

@@ -18,6 +18,7 @@ class HeaderView: UIView {
         }
         imageView.layer.cornerRadius = imageHeight/2
         imageView.clipsToBounds = true
+        imageView.backgroundColor = .lightGray
         return imageView
     }()
     
@@ -68,8 +69,11 @@ class HeaderView: UIView {
     private func setupView() {
         addSubview(hStackView)
         hStackView.snp.makeConstraints { make in
-            make.top.bottom.left.right.equalToSuperview()
+            make.top.equalToSuperview().offset(24)
+            make.bottom.equalToSuperview().offset(-24)
+            make.leading.trailing.equalToSuperview().inset(24)
         }
+        configure(title: "John Smith", subtitle: "Lorem Ipsum", image: nil)
     }
     
     func configure(title: String, subtitle: String, image: UIImage?) {
@@ -78,3 +82,15 @@ class HeaderView: UIView {
         headerImageView.image = image
     }
 }
+
+#if DEBUG
+import SwiftUI
+
+@available(iOS 13, *)
+struct HeaderView_Preview: PreviewProvider {
+    static var previews: some View {
+        // view controller using programmatic UI
+        HeaderView().showPreview()
+    }
+}
+#endif
