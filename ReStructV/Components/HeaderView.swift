@@ -38,7 +38,7 @@ class HeaderView: UIView {
         return label
     }()
     
-    private lazy var textStackView: UIStackView = {
+    lazy var textStackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [
                                         titleLabel,
                                         subtitleLabel])
@@ -47,7 +47,7 @@ class HeaderView: UIView {
         return stackView
     }()
     
-    private lazy var hStackView: UIStackView = { 
+    lazy var hStackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [
                                         headerImageView,
                                         textStackView])
@@ -66,7 +66,7 @@ class HeaderView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func setupView() {
+    func setupView() {
         addSubview(hStackView)
         hStackView.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(24)

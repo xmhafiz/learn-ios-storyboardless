@@ -30,7 +30,7 @@ class ButtonView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func setupView() {
+    func setupView() {
         addSubview(demoButton)
         demoButton.snp.makeConstraints { make in
             make.height.equalTo(buttonHeight)
@@ -40,15 +40,3 @@ class ButtonView: UIView {
         }
     }
 }
-
-#if DEBUG
-import SwiftUI
-
-@available(iOS 13, *)
-struct ButtonView_Preview: PreviewProvider {
-    static var previews: some View {
-        // view controller using programmatic UI
-        ButtonView().showPreview()
-    }
-}
-#endif

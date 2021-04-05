@@ -26,14 +26,14 @@ class PostView: UIView {
         return textView
     }()
     
-    private lazy var bodyStackView: UIStackView = {
+    lazy var bodyStackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [postTitleLabel, textView])
         stackView.axis = .vertical
         stackView.spacing = 16.0
         return stackView
     }()
     
-    private lazy var scrollView: UIScrollView = {
+    lazy var scrollView: UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.contentInset = UIEdgeInsets(top: 8, left: 24, bottom: 8, right: 24)
         return scrollView
@@ -48,7 +48,7 @@ class PostView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func setupView() {
+    func setupView() {
         // cosmetics
         backgroundColor = .systemBackground
         
@@ -68,3 +68,15 @@ class PostView: UIView {
         }
     }
 }
+
+#if DEBUG
+import SwiftUI
+
+@available(iOS 13, *)
+struct PostView_Preview: PreviewProvider {
+    static var previews: some View {
+        // view controller using programmatic UI
+        PostView().showPreview()
+    }
+}
+#endif
