@@ -50,8 +50,12 @@ class PostView: UIView {
     
     func setupView() {
         // cosmetics
-        backgroundColor = .systemBackground
-        
+        if #available(iOS 13.0, *) {
+            backgroundColor = .systemBackground
+        } else {
+            backgroundColor = .white
+            // Fallback on earlier versions
+        }
         // constraints
         scrollView.addSubview(bodyStackView)
         scrollView.contentSize = bodyStackView.frame.size
@@ -68,15 +72,19 @@ class PostView: UIView {
         }
     }
 }
-
-#if DEBUG
+#if canImport(SwiftUI) && DEBUG
 import SwiftUI
-
 @available(iOS 13, *)
-struct PostView_Preview: PreviewProvider {
+struct PostView2_Preview: PreviewProvider {
     static var previews: some View {
-        // view controller using programmatic UI
-        PostView().showPreview()
+        UIViewPreview {
+            let view = PostView()
+            view.postTitleLabel.text =  DemoStore.shared.postTitle
+            view.textView.text = DemoStore.shared.postDetails
+            return view
+        }.previewLayout(.sizeThatFits)
+            .padding()
     }
+    
 }
 #endif

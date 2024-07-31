@@ -38,7 +38,12 @@ class ViewController: UIViewController {
     
     func setupView() {
         // cosmetics
-        view.backgroundColor = .systemBackground
+        if #available(iOS 13.0, *) {
+            view.backgroundColor = .systemBackground
+        } else {
+            view.backgroundColor = .white
+            // Fallback on earlier versions
+        }
         // constraints
         // added postView
         view.addSubview(mainStackView)
@@ -54,6 +59,7 @@ class ViewController: UIViewController {
     }
     
     func setupData() {
+    
         // navigation title
         self.title = "Lorem Ipsum"
         // demo data
@@ -73,7 +79,7 @@ class ViewController: UIViewController {
 #if DEBUG
 import SwiftUI
 
-@available(iOS 13, *)
+@available(iOS 14, *)
 struct ViewController_Preview: PreviewProvider {
     static var previews: some View {
         // view controller using programmatic UI

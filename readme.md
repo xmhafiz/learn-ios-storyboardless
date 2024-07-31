@@ -1,6 +1,7 @@
 ## Description
-iOS sample project for learning UIKit without storyboard / xib
 
+iOS sample project for learning UIKit without storyboard / xib
+Current version supports iOS 12+
 
 ![screenshot](screenshot.png)
 
@@ -11,4 +12,5 @@ iOS sample project for learning UIKit without storyboard / xib
 - Snapkit
 
 ### License
+
 Licensed under the [MIT license](http://opensource.org/licenses/MIT)

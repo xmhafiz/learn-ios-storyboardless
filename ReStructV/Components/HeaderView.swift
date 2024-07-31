@@ -83,14 +83,3 @@ class HeaderView: UIView {
     }
 }
 
-#if DEBUG
-import SwiftUI
-
-@available(iOS 13, *)
-struct HeaderView_Preview: PreviewProvider {
-    static var previews: some View {
-        // view controller using programmatic UI
-        HeaderView().showPreview()
-    }
-}
-#endif
